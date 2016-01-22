@@ -27,9 +27,11 @@ The TeamSpeak 3 Query API is documented [here](http://media.teamspeak.com/ts3_li
 This library has an online documentation which was created using [sharpDox](http://sharpdox.de). You can find the documentation on the [GitHub Page of this repository](https://nikeee.github.io/TeamSpeak3QueryAPI).
 
 ## Compatibility
-There will be a version for .NET 4.0 using the Async Targeting Pack.
-Every framework below .NET 4.0 will not be supported due to the lack of the TPL.
-Only God knows whether this library is compatible with Mono.
+This library is compatible with these platforms and frameworks:
+- .NET Framework 4.5
+- .NET Framework 4.6
+- .NET Platform 5.0
+- dnxcore 5.0
 
 ### NuGet
 There is currently no NuGet package, but there will be one!
