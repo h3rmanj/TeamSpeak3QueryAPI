@@ -4,7 +4,9 @@ using System.Runtime.Serialization;
 namespace TeamSpeak3QueryApi.Net
 {
     /// <summary>Represents errors that occur during query execution.</summary>
+#if FW
     [Serializable]
+#endif
     public class QueryException : Exception
     {
         /// <summary>Gets the returned error by the Query API host.</summary>
@@ -31,7 +33,7 @@ namespace TeamSpeak3QueryApi.Net
         {
             Error = error;
         }
-
+#if FW
         /// <summary>Initializes a new instance of the <see cref="T:TeamSpeak3QueryApi.Net.QueryException"/> class with serialized data.</summary>
         /// <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
@@ -48,5 +50,6 @@ namespace TeamSpeak3QueryApi.Net
             base.GetObjectData(info, context);
             info.AddValue("Error", Error);
         }
+#endif
     }
 }

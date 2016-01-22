@@ -1,20 +1,38 @@
 ﻿{
     "version": "1.0.0-*",
-    "dependencies": {
-    },
-
+    "dependencies": {},
     "frameworks": {
         "net45": {
             "compilationOptions": {
                 "define": [
+                    "FW",
                     "NET45"
                 ]
+            }
+        },
+        "net46": {
+            "compilationOptions": {
+                "define": [
+                    "FW",
+                    "NET46"
+                ]
+            }
+        },
+        "dnxcore50": {
+            "compilationOptions": {
+                "define": [
+                    "DNXCORE"
+                ]
             },
-            "frameworkAssemblies": {
-                "mscorlib": "",
-                "Microsoft.CSharp": "",
-                "System": "",
-                "System.Core": ""
+            "dependencies": {
+                "Microsoft.CSharp": "4.0.0",
+                "System.IO": "4.0.10",
+                "System.Linq": "4.0.0",
+                "System.Collections": "4.0.10",
+                "System.Collections.Concurrent": "4.0.10",
+                "System.Runtime": "4.0.21-beta-23516",
+                "System.Runtime.Serialization.Primitives": "4.1.0-beta-23516",
+                "System.Net.Sockets": "4.1.0-beta-23516",
             }
         }
     }

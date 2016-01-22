@@ -343,11 +343,13 @@ namespace TeamSpeak3QueryApi.Net
                 while (!_cancelTask)
                 {
                     var line = await _reader.ReadLineAsync().ConfigureAwait(false);
+#if FW
                     Trace.WriteLine(line);
+#endif
                     if(string.IsNullOrWhiteSpace(line))
                         continue;
                     var s = line.Trim();
-                    if (s.StartsWith("error", StringComparison.InvariantCultureIgnoreCase))
+                    if (s.StartsWith("error", StringComparison.OrdinalIgnoreCase))
                     {
                         Debug.Assert(_currentCommand != null);
 
@@ -355,7 +357,7 @@ namespace TeamSpeak3QueryApi.Net
                         _currentCommand.Error = error;
                         InvokeResponse(_currentCommand);
                     }
-                    else if (s.StartsWith("notify", StringComparison.InvariantCultureIgnoreCase))
+                    else if (s.StartsWith("notify", StringComparison.OrdinalIgnoreCase))
                     {
                         s = s.Remove(0, "notify".Length);
                         var not = ParseNotification(s);
@@ -377,7 +379,9 @@ namespace TeamSpeak3QueryApi.Net
             if (_queue.Count > 0)
             {
                 _currentCommand = _queue.Dequeue();
+#if FW
                 Trace.WriteLine(_currentCommand.SentText);
+#endif
                 await _writer.WriteLineAsync(_currentCommand.SentText).ConfigureAwait(false);
                 await _writer.FlushAsync().ConfigureAwait(false);
             }
@@ -406,7 +410,11 @@ namespace TeamSpeak3QueryApi.Net
             if (disposing)
             {
                 //TODO: Test this
+#if FW
                 _client?.Close();
+#else
+                _client?.Dispose();
+#endif
                 _ns?.Dispose();
                 _reader?.Dispose();
                 _writer?.Dispose();
