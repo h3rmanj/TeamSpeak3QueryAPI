@@ -1,5 +1,8 @@
 ﻿using System;
+
+#if FW
 using System.Runtime.Serialization;
+#endif
 
 namespace TeamSpeak3QueryApi.Net
 {
