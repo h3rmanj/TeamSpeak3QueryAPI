@@ -100,3 +100,5 @@ Thumbs.db
 *.sln.ide/
 
 logindata.secret
+/src/.vs/TeamSpeak3QueryApi/v15/Server/sqlite3
+/src/packages/ConfigureAwaitChecker.Analyzer.1.0.0-beta4

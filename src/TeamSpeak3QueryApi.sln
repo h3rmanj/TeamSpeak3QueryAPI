@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamSpeak3QueryApi", "TeamSpeak3QueryApi\TeamSpeak3QueryApi.csproj", "{5E319CF3-6546-42B5-B9C2-E67D8E2C0D2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamSpeak3QueryApi.Demo", "TeamSpeak3QueryApi.Demo\TeamSpeak3QueryApi.Demo.csproj", "{EC04B74D-A3B2-4494-960F-A2CB3DCD9811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamSpeak3QueryApiCore", "TeamSpeak3QueryApiCore\TeamSpeak3QueryApiCore.csproj", "{B99B4FC5-FC80-4912-BB48-A9C5B220A9FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{EC04B74D-A3B2-4494-960F-A2CB3DCD9811}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC04B74D-A3B2-4494-960F-A2CB3DCD9811}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC04B74D-A3B2-4494-960F-A2CB3DCD9811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B99B4FC5-FC80-4912-BB48-A9C5B220A9FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99B4FC5-FC80-4912-BB48-A9C5B220A9FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99B4FC5-FC80-4912-BB48-A9C5B220A9FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99B4FC5-FC80-4912-BB48-A9C5B220A9FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67246449-7479-430E-948B-A4EA426BC632}
 	EndGlobalSection
 EndGlobal
